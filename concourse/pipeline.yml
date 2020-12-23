@@ -39,7 +39,8 @@ jobs:
         params:
           CF_ORG: govuk-accounts
           CF_APP_NAME: govuk-account-static-errors
-          DOMAIN: govuk-account-static-errors-staging.london.cloudapps.digital
+          HOSTNAME: govuk-account-static-errors-staging
+          VARFILE_PATH: vars-staging.yml
           CF_SPACE: staging
         on_failure:
           put: govuk-slack
@@ -64,7 +65,8 @@ jobs:
         params:
           CF_ORG: govuk-accounts
           CF_APP_NAME: govuk-account-static-errors
-          DOMAIN: govuk-account-static-errors.london.cloudapps.digital
+          HOSTNAME: govuk-account-static-errors
+          VARFILE_PATH: vars-production.yml
           CF_SPACE: production
         on_failure:
           put: govuk-slack
