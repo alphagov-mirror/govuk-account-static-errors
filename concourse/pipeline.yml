@@ -14,7 +14,7 @@ resources:
     icon: github-circle
     source:
       uri: https://github.com/alphagov/govuk-account-static-errors.git
-      branch: main
+      branch: switch-to-nginx
 
   - name: govuk-slack
     type: slack-notification
